@@ -7,6 +7,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+button {
+    cursor: pointer;
+}
+
 .container {
     height: 100vh;
     width: 100%;
@@ -150,6 +154,84 @@
 #quiz_start_btn:hover {
     background-color: #75DCC5;
     box-shadow: none;
+}
+
+/* displaying the quiz section now */
+.quiz-landing {
+    width: 70%;
+    margin: auto;
+}
+
+#timer {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 1.2rem 0;
+}
+
+#quiz-question-id {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 1.2rem;
+}
+
+.quiz__question {
+    display: block;
+    text-align: center;
+    margin: 1.2rem;
+    margin-bottom: 5rem;
+}
+
+.row {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.row div {
+    border: 1px solid #000;
+    width: 40%;
+    cursor: pointer;
+    padding: 1rem;
+    padding-left: 1.5rem;
+    border-radius: 10px;
+}
+
+.row div[aria-selected="true"] {
+    background-color: #3b3e9c;
+    color: #fff;
+}
+
+.quiz__buttons {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.quiz__buttons {
+    margin-top: 2rem;
+}
+
+.quiz__next-btn {
+    background-color: #e2e8f0;
+    padding: 0.8rem 2rem;
+    font-weight: 700;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.quiz__next-btn:hover {
+    background-color: #cbd5e1;
+    box-shadow: none;
+
+}
+
+/* for the results section */
+.results__section {
+    font-size: 3rem;
+    font-weight: 700;
 }
 
 /* this is for displaying the error */

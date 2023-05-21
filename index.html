@@ -58,8 +58,34 @@
     </div>
 
     <!-- quiz details page -->
+    <div id="quiz", class="container container__landing">
+        <!-- this button for simply cheking the quiz -->
+        <main class="quiz-landing" id="quiz_container" style="display: none;">
+            <div id="timer"></div>
+            <div id="quiz-question-id"></div>
+            <h1 id="question" class="quiz__question"></h1>
+            <div id="choices" class="quiz__choices">
+                <div class="row">
+                    <div id="choice1" class="choice1" aria-selected="false"></div>
+                    <div id="choice2" class="choice2" aria-selected="false"></div>
+                </div>
+                <div class="row">
+                    <div id="choice3" class="choice3" aria-selected="false"></div>
+                    <div id="choice4" class="choice4" aria-selected="false"></div>
+                </div>
+            </div>
+            <div class="quiz__buttons">
+                <button id="next-quiz-btn" class="quiz__next-btn">Next</div>
+            </div>
+        </main>
+    </div>
 
     <!-- final score page -->
+    <div id="results", class="container container__landing" style="display: none;">
+        <main>
+            <div id="results_section" class="results__section"></div>
+        </main>
+    </div>
 
 
     <script src="./scripts/scripts.js"></script>
