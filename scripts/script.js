@@ -173,12 +173,12 @@ const techTopicDiv = document.getElementById('tech');
 const sportTopicDiv = document.getElementById('sport');
 
 function toggleTopics(selectTopic, unselectTopic, topicName) {
-    let isSelected = selectTopic.getAttribute('aria-selected');
+    let isSelected = selectTopic.getAttribute('aria-checked');
     if (isSelected == true) {
-        selectTopic.setAttribute('aria-selected', !isSelected);
+        selectTopic.setAttribute('aria-checked', !isSelected);
     } else {
-        selectTopic.setAttribute('aria-selected', true);
-        unselectTopic.setAttribute('aria-selected', false);
+        selectTopic.setAttribute('aria-checked', true);
+        unselectTopic.setAttribute('aria-checked', false);
         localStorage.setItem('topic', `${topicName}`)
     }
 }
@@ -200,9 +200,9 @@ const quizPageButton = document.getElementById('quiz_start_btn');
 // this is the starting point of the quiz button
 quizPageButton.addEventListener('click', (e) => {
     e.preventDefault();
-    // here first of all checking if the aria-selected field of either of the fields are true or not
-    if (sportTopicDiv.getAttribute('aria-selected') === 'false' &&
-        techTopicDiv.getAttribute('aria-selected') === 'false') {
+    // here first of all checking if the aria-checked field of either of the fields are true or not
+    if (sportTopicDiv.getAttribute('aria-checked') === 'false' &&
+        techTopicDiv.getAttribute('aria-checked') === 'false') {
         displayError("Please select a topic!", topicSelectionPage);
     } else {
         navigate(QUIZ_PAGE);
@@ -232,9 +232,9 @@ function selectChoice(selectedIdx) {
         const curId = `choice${choiceIdx}`;
         const curChoiceElement = document.getElementById(curId);
         if (choiceIdx === selectedIdx) {
-            curChoiceElement.setAttribute('aria-selected', 'true');
+            curChoiceElement.setAttribute('aria-checked', 'true');
         } else {
-            curChoiceElement.setAttribute('aria-selected', 'false');
+            curChoiceElement.setAttribute('aria-checked', 'false');
         }
     }
 }
@@ -263,7 +263,7 @@ function populateQuizSection(quizContent, index) {
 function clearChoices() {
     for (let index = 1; index <= 4; index++) {
         document.getElementById(`choice${index}`).removeAttribute('style');
-        document.getElementById(`choice${index}`).setAttribute('aria-selected', 'false');
+        document.getElementById(`choice${index}`).setAttribute('aria-checked', 'false');
     }
 }
 

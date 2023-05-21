@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- importing the css file -->
-    <link href="./styles/styles.css" rel="stylesheet" />
+    <link href="styles/styles.css" rel="stylesheet">
     <title>Quiz Application</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
 
     <!-- the landing page -->
     <div id="landing" class="container container__landing">
-        <main class="landing">
+        <div class="landing">
             <div class="quiz-hero">
                 <h1>QUIZZER</h1>
                 <div class="quiz-hero__description">
@@ -25,12 +25,12 @@
                     <button id="username_page_btn">Continue</button>
                 </div>
             </div>
-        </main>
+        </div>
     </div>
 
     <!-- the user details page -->
     <div id="user_details" class="container container__landing" style="display: none;">
-        <main class="user-landing">
+        <div class="user-landing">
             <div>
                 <h1>Let us get to know you!</h1>
                 <form id="user-form">
@@ -39,55 +39,55 @@
                     <button type="submit">Next</button>
                 </form>
             </div>
-        </main>
+        </div>
     </div>
 
     <!-- quiz topic selection page -->
     <div id="topic_select" class="container container__landing" style="display: none;">
-        <main class="topic-landing">
+        <div class="topic-landing">
             <div id="topic-body">
                 <h1>Let's select a topic to continue...</h1>
                 <!-- select elements -->
-                <section id="topics">
-                    <div class="topic__section" id="tech" aria-selected="false">Technology</div>
-                    <div class="topic__section" id="sport" aria-selected="false">Sports</div>
-                </section>
+                <div id="topics">
+                    <div class="topic__section" id="tech" role="checkbox" aria-checked="false">Technology</div>
+                    <div class="topic__section" id="sport" role="checkbox" aria-checked="false">Sports</div>
+                </div>
                 <button id="quiz_start_btn">Start Quiz</button>
             </div>
-        </main>
+        </div>
     </div>
 
     <!-- quiz details page -->
-    <div id="quiz", class="container container__landing">
+    <div id="quiz" class="container container__landing">
         <!-- this button for simply cheking the quiz -->
-        <main class="quiz-landing" id="quiz_container" style="display: none;">
+        <div class="quiz-landing" id="quiz_container" style="display: none;">
             <div id="timer"></div>
             <div id="quiz-question-id"></div>
-            <h1 id="question" class="quiz__question"></h1>
+            <h1 id="question" class="quiz__question">...</h1>
             <div id="choices" class="quiz__choices">
                 <div class="row">
-                    <div id="choice1" class="choice1" aria-selected="false"></div>
-                    <div id="choice2" class="choice2" aria-selected="false"></div>
+                    <div id="choice1" class="choice1" role="checkbox" aria-checked="false"></div>
+                    <div id="choice2" class="choice2" role="checkbox" aria-checked="false"></div>
                 </div>
                 <div class="row">
-                    <div id="choice3" class="choice3" aria-selected="false"></div>
-                    <div id="choice4" class="choice4" aria-selected="false"></div>
+                    <div id="choice3" class="choice3" role="checkbox" aria-checked="false"></div>
+                    <div id="choice4" class="choice4" role="checkbox" aria-checked="false"></div>
                 </div>
             </div>
             <div class="quiz__buttons">
-                <button id="next-quiz-btn" class="quiz__next-btn">Next</div>
+                <button id="next-quiz-btn" class="quiz__next-btn">Next</button>
             </div>
-        </main>
+        </div>
     </div>
 
     <!-- final score page -->
-    <div id="results", class="container container__landing" style="display: none;">
-        <main>
+    <div id="results" class="container container__landing" style="display: none;">
+        <div>
             <div id="results_section" class="results__section"></div>
-        </main>
+        </div>
     </div>
 
 
-    <script src="./scripts/scripts.js"></script>
+    <script src="./scripts/script.js"></script>
 </body>
 </html>

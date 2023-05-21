@@ -124,11 +124,11 @@ button {
     font-weight: 500;
 }
 
-.topic__section[aria-selected="false"] {
+.topic__section[aria-checked="false"] {
     background-color: #fff;
 }
 
-.topic__section[aria-selected="true"] {
+.topic__section[aria-checked="true"] {
     background-color: #3b3e9c;
     color: #fff;
 }
@@ -198,7 +198,7 @@ button {
     border-radius: 10px;
 }
 
-.row div[aria-selected="true"] {
+.row div[aria-checked="true"] {
     background-color: #3b3e9c;
     color: #fff;
 }
