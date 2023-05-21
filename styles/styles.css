@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    width: 100%;
+}
+
+.container__landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.landing {
+    width: 80%;
+    margin: auto;
+}
+
+.quiz-hero {
+    text-align: center;
+}
+
+.quiz-hero > h1 {
+    font-size: 5rem;
+}
+
+.quiz-hero__description {
+    padding: 1.2rem;
+    font-size: 2.5rem;
+}
+
+.quiz-hero__btn > button {
+    background-color: #65B12B;
+    width: 30%;
+    padding: 1rem;
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.quiz-hero__btn > button:hover {
+    background-color: #3B6B1B;
+}
+
+/* user details designing starts here */
+.user-landing {
+    width: 60%;
+    margin: auto;
+}
+
+.user-landing h1 {
+    font-size: 3.5rem;
+}
+
+#user-form {
+    margin-top: 3rem;
+}
+
+.user-form__label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.user-form__input {
+    display: block;
+    width: 70%;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+#user-form button {
+    background-color: #65B12B;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
