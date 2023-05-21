@@ -93,3 +93,7 @@
     color: #fff;
     cursor: pointer;
 }
+
+#user-form button:hover {
+    background-color: #3B6B1B;
+}
