@@ -129,6 +129,10 @@
     color: #fff;
 }
 
+#topic-body > h2 {
+    font-size: 1.6rem;
+}
+
 
 #quiz_start_btn {
     background-color: #80F0DE;
@@ -171,3 +175,5 @@
     cursor: pointer;
     z-index: 1001;
 }
+
+

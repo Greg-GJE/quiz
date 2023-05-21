@@ -18,7 +18,7 @@ const navigationStack = [LANDING_PAGE];
 const userNameForm = document.querySelector('#user-form');
 
 // defining the error close button
-
+let playerName = null;
 
 /*
 <div id="error">
@@ -50,6 +50,21 @@ function createErrorMessage(errorMsg) {
     errorContainer.appendChild(closeButton);
 
     return errorContainer;
+}
+
+function updateTopicSelectPageAndNavigate() {
+    playerName = localStorage.getItem('username') ?? 'anonymous';
+
+    // creating the playerDisplay section
+    const playerDisplaySection = document.createElement('h2');
+    playerDisplaySection.textContent = `Hi ${playerName}!`;
+
+    const topicBody = document.getElementById('topic-body');
+    topicBody.insertBefore(playerDisplaySection, topicBody.firstChild);
+
+    // now navigating to the page
+    navigate(TOPIC_SELECT_PAGE);
+
 }
 
 /**
@@ -86,9 +101,35 @@ userNameForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const userName = userNameForm.elements.namedItem("username").value;
     if (userName.length > 0) {
-        // adding the username to the localstorage
-        console.log('Will add to localstorage and then work on the next page');
+        localStorage.setItem("username", userName);
+        updateTopicSelectPageAndNavigate();
     } else {
         displayError('username cannot be empty', userSectionPage);
     }
+});
+
+// TOPIC SELECTION ITEMS START HERE
+const techTopicDiv = document.getElementById('tech');
+const sportTopicDiv = document.getElementById('sport');
+
+function toggleTopics(selectTopic, unselectTopic, topicName) {
+    let isSelected = selectTopic.getAttribute('aria-selected');
+    if (isSelected == true) {
+        selectTopic.setAttribute('aria-selected', !isSelected);
+    } else {
+        selectTopic.setAttribute('aria-selected', true);
+        unselectTopic.setAttribute('aria-selected', false);
+        localStorage.setItem('topic', `${topicName}`)
+    }
+}
+
+
+techTopicDiv.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleTopics(techTopicDiv, sportTopicDiv, 'tech');
+});
+
+sportTopicDiv.addEventListener('click', (e) => {
+    e.preventDefault();
+    toggleTopics(sportTopicDiv, techTopicDiv, 'sports');
 });
