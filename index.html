@@ -12,17 +12,17 @@
     <!-- this section will be containing the initial application -->
     <!-- first section will be containing the section that will be containing -->
 
-
+    
     <!-- the landing page -->
-    <div id="landing" class="container container__landing" style="display: none;">
+    <div id="landing" class="container container__landing">
         <main class="landing">
             <div class="quiz-hero">
-                <h1>Quizz</h1>
+                <h1>QUIZZER</h1>
                 <div class="quiz-hero__description">
                     <p>Lets Challenge ourselves</p>
                 </div>
                 <div id="landing__next-page-btn" class="quiz-hero__btn">
-                    <button>Continue</button>
+                    <button id="username_page_btn">Continue</button>
                 </div>
             </div>
         </main>
@@ -35,7 +35,7 @@
                 <h1>Let us get to know you!</h1>
                 <form id="user-form">
                     <label class="user-form__label" for="username">Enter your username</label>
-                    <input id="username" class="user-form__input" type="text">
+                    <input id="username" class="user-form__input" type="text" name="username">
                     <button type="submit">Next</button>
                 </form>
             </div>
@@ -43,10 +43,16 @@
     </div>
 
     <!-- quiz topic selection page -->
-    <div id="topic_select" class="container container__landing">
+    <div id="topic_select" class="container container__landing" style="display: none;">
         <main class="topic-landing">
             <div>
-                <h1>Lets select a topic to continue!</h1>
+                <h1>Let's select a topic to continue!</h1>
+                <!-- select elements -->
+                <section id="topics">
+                    <div class="topic__section" id="topic__tech" aria-selected="false">Technology</div>
+                    <div class="topic__section" id="topic__sport" aria-selected="false">Sports</div>
+                </section>
+                <button id="quiz_start_btn">Let's Start</button>
             </div>
         </main>
     </div>
@@ -56,6 +62,6 @@
     <!-- final score page -->
 
 
-    <script defer src="./scripts/scripts.js"></script>
+    <script src="./scripts/scripts.js"></script>
 </body>
 </html>

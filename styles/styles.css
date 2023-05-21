@@ -38,7 +38,7 @@
 }
 
 .quiz-hero__btn > button {
-    background-color: #65B12B;
+    background-color: #6f64ed;
     width: 30%;
     padding: 1rem;
     margin-top: 1rem;
@@ -48,10 +48,11 @@
     border-radius: 10px;
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
 }
 
 .quiz-hero__btn > button:hover {
-    background-color: #3B6B1B;
+    background-color: #3b3e9c;
 }
 
 /* user details designing starts here */
@@ -82,7 +83,7 @@
 }
 
 #user-form button {
-    background-color: #65B12B;
+    background-color: #6f64ed;
     padding: 0.8rem 2rem;
     font-size: 1.2rem;
     font-weight: 500;
@@ -92,8 +93,81 @@
     border-radius: 5px;
     color: #fff;
     cursor: pointer;
+    box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 #user-form button:hover {
-    background-color: #3B6B1B;
+    background-color: #3b3e9c;
+}
+
+.topic-landing {
+    width: 60%;
+    margin: auto;
+}
+
+.topic-landing h1 {
+    font-size: 3.2rem;
+}
+
+.topic__section {
+    width: 100%;
+    padding: 2rem;
+    border: 2px solid rgba(0, 0, 0, 0.4);
+    margin: 2rem 0;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.topic__section[aria-selected="false"] {
+    background-color: #fff;
+}
+
+.topic__section[aria-selected="true"] {
+    background-color: #3b3e9c;
+    color: #fff;
+}
+
+
+#quiz_start_btn {
+    background-color: #80F0DE;
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 2rem;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    cursor: pointer;
+}
+
+#quiz_start_btn:hover {
+    background-color: #75DCC5;
+    box-shadow: none;
+}
+
+/* this is for displaying the error */
+#error {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.5rem 1.5rem;
+    z-index: 1000;
+    border: 1px solid #ff7575;
+    background-color: #fff1f1;
+    color: #600000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#error button {
+    border: none;
+    background-color: transparent;
+    color: #000;
+    cursor: pointer;
+    z-index: 1001;
 }
