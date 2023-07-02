@@ -259,9 +259,36 @@ button {
     z-index: 1001;
 }
 
+@media screen and (max-width: 500px) {
+
+    .user-landing {
+        width: 100%;
+        padding: 0 1.2rem;
+        margin: auto;
+    }
+
+    .quiz__question {
+        font-size: 24px;
+    }
+
+    #quiz-question-id {
+        font-size: 28px;
+    }
+
+    #timer {
+        font-size: 20px;
+    }
+
+    .results__section {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+    }
+}
+
 @media screen and (max-width: 1000px){
     .user-landing {
-        min-width:90%;
+        min-width: 90%;
         padding: 0 1.2rem;
         margin: auto;
     }

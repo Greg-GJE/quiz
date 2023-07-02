@@ -160,11 +160,11 @@ userNamePageBtn.addEventListener('click', (e) => {
 userNameForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const userName = userNameForm.elements.namedItem("username").value;
-    if (userName.length > 0) {
-        localStorage.setItem("username", userName);
+    if (userName.trim().length >= 5) {
+        localStorage.setItem("username", userName.trim());
         updateTopicSelectPageAndNavigate();
     } else {
-        displayError('username cannot be empty', userSectionPage);
+        displayError('username should atleast consist of 5 characters', userSectionPage);
     }
 });
 
