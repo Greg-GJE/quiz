@@ -10,7 +10,6 @@ const ERROR_CLOSE_BTN = "error-close-btn";
 // defining the pages
 const userSectionPage = document.getElementById(USER_DETAILS_PAGE);
 const topicSelectionPage = document.getElementById(TOPIC_SELECT_PAGE);
-const quizPage = document.getElementById(QUIZ_PAGE);
 
 // this will be used for navigation through different sections of the code
 const navigationStack = [LANDING_PAGE];
